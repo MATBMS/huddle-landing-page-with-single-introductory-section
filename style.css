@@ -1,0 +1,5 @@
+header {
+  background-image: url(./images/bg-desktop.svg), linear-gradient(#684BB1, #684BB1);
+  background-size: cover;
+  height: 100vh;
+}
