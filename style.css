@@ -31,7 +31,8 @@ button {
 header {
   background-image: url(./images/bg-desktop.svg), linear-gradient(#684BB1, #684BB1);
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   padding: 64px 80px 40px 80px;
 }
 
@@ -39,7 +40,7 @@ header {
 
 .navbar img {
   width: 200px;
-  height: 32px;
+  /* height: 32px; */
   margin-bottom: 104px;
 }
 
@@ -47,6 +48,7 @@ header {
 
 .hero {
   display: flex;
+  flex-direction: row;
   gap: 60px;
   margin-bottom: 27px;
 }
@@ -119,4 +121,76 @@ header {
 
 .social-icon:hover img {
   filter: invert(64%) sepia(100%) saturate(750%) hue-rotate(270deg) brightness(95%) contrast(101%);
+}
+
+/* == RESPONSIVE == */
+
+@media (max-width: 375px) {
+
+  /* == TYPOGRAPHY == */
+
+  h1 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  button {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  /* == HEADER == */
+
+  header {
+    background-image: url(./images/bg-mobile.svg), linear-gradient(#684BB1, #684BB1);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    padding: 40px;
+  }
+
+  .navbar img {
+    width: 120px;
+    /* height: 19px; */
+    margin-bottom: 70px;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-img,
+  .hero-cta {
+    width: 100%;
+  }
+
+  .hero-img img {
+    width: 269px;
+    height: 209px;
+  }
+
+  .hero-cta {
+    gap: 16px;
+    align-items: center;
+  }
+
+  button {
+    margin-top: 24px;
+    margin-bottom: 64px;
+  }
+
+  /* == SOCIAL == */
+
+  .social {
+    justify-content: center;
+    gap: 10.5px;
+  }
 }
